@@ -4,3 +4,6 @@
 [submodule "ti-launchxl-f280049c-unittests/scrutiny-test-framework"]
 	path = ti-launchxl-f280049c-unittests/scrutiny-test-framework
 	url = ssh://git@github.com/scrutinydebugger/scrutiny-test-framework
+[submodule "ti-lauchxl-f280049c-memdump/scrutiny-embedded"]
+	path = ti-launchxl-f280049c-memdump/scrutiny-embedded
+	url = https://github.com/scrutinydebugger/scrutiny-embedded
