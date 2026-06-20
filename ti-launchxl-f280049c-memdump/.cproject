@@ -20,7 +20,7 @@
                 </extensions>
             </storageModule>
             <storageModule moduleId="cdtBuildSystem" version="4.0.0">
-                <configuration artifactExtension="out" artifactName="${ProjName}" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" id="com.ti.ccstudio.buildDefinitions.C2000.Default.751077843" name="Memdump" parent="com.ti.ccstudio.buildDefinitions.C2000.Default" postbuildStep="&quot;C:\Program Files\Git\git-bash.exe&quot; -c scrutiny_postbuid.sh">
+                <configuration artifactExtension="out" artifactName="${ProjName}" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" id="com.ti.ccstudio.buildDefinitions.C2000.Default.751077843" name="Memdump" parent="com.ti.ccstudio.buildDefinitions.C2000.Default" postbuildStep="bash &quot;${PROJECT_ROOT}/scrutiny_postbuild.sh&quot; &quot;${BuildArtifactFilePath}&quot;">
                     <folderInfo id="com.ti.ccstudio.buildDefinitions.C2000.Default.751077843." name="/" resourcePath="">
                         <toolChain id="com.ti.ccstudio.buildDefinitions.C2000_25.11.exe.DebugToolchain.388409780" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.C2000_25.11.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.C2000_25.11.exe.linkerDebug.1243541739">
                             <option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.200209966" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
@@ -118,6 +118,6 @@
         </cconfiguration>
     </storageModule>
     <storageModule moduleId="cdtBuildSystem" version="4.0.0">
-        <project id="ti-lauchxl-f280049c-memdump.com.ti.ccstudio.buildDefinitions.C2000.ProjectType.1241114032" name="C2000" projectType="com.ti.ccstudio.buildDefinitions.C2000.ProjectType"/>
+        <project id="ti-launchxl-f280049c-memdump.com.ti.ccstudio.buildDefinitions.C2000.ProjectType.1241114032" name="C2000" projectType="com.ti.ccstudio.buildDefinitions.C2000.ProjectType"/>
     </storageModule>
 </cproject>

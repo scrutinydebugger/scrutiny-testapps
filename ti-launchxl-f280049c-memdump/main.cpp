@@ -57,7 +57,8 @@ void main(void)
     for(;;)
     {
         uint32_t const timestamp = get_timestamp_100ns();
-        scrutiny_idle_update(timestamp - last_timestamp);
+        uint32_t const timediff = timestamp - last_timestamp;
+        scrutiny_idle_update(timediff);
         last_timestamp = timestamp;
     }
 }

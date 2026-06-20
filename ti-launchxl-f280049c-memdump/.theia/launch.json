@@ -2,29 +2,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "ti-lauchxl-f280049c-memdump",
+            "name": "ti-launchxl-f280049c-memdump",
             "type": "ccs-debug",
             "request": "launch",
             "projectInfo": {
-                "name": "ti-lauchxl-f280049c-memdump",
-                "resourceId": "/ti-lauchxl-f280049c-memdump"
+                "name": "ti-launchxl-f280049c-memdump",
+                "resourceId": "/ti-launchxl-f280049c-memdump"
             },
             "connections": [
-                {
-                    "name": "Texas Instruments XDS100v2 USB Debug Probe_0",
-                    "cores": [
-                        {
-                            "name": "C28xx_CPU1",
-                            "debuggerSettings": {
-                                "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
-                            }
-                        }
-                    ]
-                },
                 {
                     "name": "Texas Instruments XDS110 USB Debug Probe_0",
                     "cores": [
                         {
+                            "program": "${workspaceFolder}/Memdump/ti-launchxl-f280049c-memdump_tagged.out",
                             "name": "C28xx_CPU1",
                             "debuggerSettings": {
                                 "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues>\n\n  <property id=\"Z1B0LINKPOINTER1\">\n    <curValue>1FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0LINKPOINTER2\">\n    <curValue>1FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0LINKPOINTER3\">\n    <curValue>1FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0OTPGPREG1\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0OTPGPREG2\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0OTPGPREG3\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0PSWDLOCK\">\n    <curValue>FB7FFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0CRCLOCK\">\n    <curValue>4BFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0OTPBOOTCTRL\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0CSMPSWD1\">\n    <curValue>47FFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0GRABSECT\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0GRABRAM\">\n    <curValue>0000FFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0EXEONLYSECT\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B0EXEONLYRAM\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B1LINKPOINTER1\">\n    <curValue>1FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B1LINKPOINTER2\">\n    <curValue>1FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B1LINKPOINTER3\">\n    <curValue>1FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B1GRABSECT\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z1B1EXEONLYSECT\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0LINKPOINTER1\">\n    <curValue>1FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0LINKPOINTER2\">\n    <curValue>1FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0LINKPOINTER3\">\n    <curValue>1FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0OTPGPREG1\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0OTPGPREG2\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0OTPGPREG3\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0PSWDLOCK\">\n    <curValue>BF7FFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0CRCLOCK\">\n    <curValue>0FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0OTPBOOTCTRL\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0CSMPSWD1\">\n    <curValue>E3FFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0GRABSECT\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0GRABRAM\">\n    <curValue>0000FFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0EXEONLYSECT\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B0EXEONLYRAM\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B1LINKPOINTER1\">\n    <curValue>1FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B1LINKPOINTER2\">\n    <curValue>1FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B1LINKPOINTER3\">\n    <curValue>1FFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B1GRABSECT\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"Z2B1EXEONLYSECT\">\n    <curValue>FFFFFFFF</curValue>\n  </property>\n\n  <property id=\"FlashFiles\">\n    <curValue></curValue>\n  </property>\n\n</PropertyValues>\n"
