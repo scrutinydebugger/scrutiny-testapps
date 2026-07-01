@@ -1,7 +1,6 @@
 #include <stdint.h>
 
 #include "uart.hpp"
-#include "term_parser.hpp"
 #include "file1.hpp"
 #include "file2.hpp"
 #include "file3.hpp"
@@ -22,7 +21,9 @@ int main(void)
     file2func1();
     file2func1(123);
 
-    process_dump_cmd();
+    uart_puts("Ready to dump\n");
+
+    while(1);
 
     return 0;
 }

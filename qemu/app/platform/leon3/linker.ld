@@ -17,6 +17,9 @@ SECTIONS {
 
     .text : {
         *(.text .text.*)
+    } > RAM
+
+    .rodata : {
         *(.rodata .rodata.*)
     } > RAM
 

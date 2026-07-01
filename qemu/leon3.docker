@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
     texinfo             \
     qemu-system-sparc   \
     ninja-build         \
+    python3             \
+    python3-venv        \
     cmake               \
     && rm -rf /var/lib/apt/lists/*
 
@@ -69,4 +71,8 @@ RUN mkdir build-gcc && cd build-gcc && \
 
 RUN rm -rf /tmp/toolchain
 
-WORKDIR /work
+RUN python3 -m venv /tmp/venv
+
+RUN /tmp/venv/bin/python -m pip --no-cache-dir install  \
+    pyelftools  
+
