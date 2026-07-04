@@ -11,24 +11,24 @@ cd "$SCRIPT_DIR"
 info "Running Scrutiny post build script : $(basename "${BASH_SOURCE[0]}")"
 which scrutiny 2>&1>/dev/null || fatal "scrutiny not in PATH"   # Check if we have scrutiny in the PATH
 
-ELFFILE=${1-""}
+ELFFILE=${1-""}     # Read command line arg
 
-[ -z ${ELFFILE} ] && fatal "Missing .elf firmware path"
+[ -z ${ELFFILE} ] && fatal "Missing .elf firmware path"         # Check var empty
 ELFFILE=$(realpath "$ELFFILE")
-[ ! -f ${ELFFILE} ] && fatal "File does not exist"
+[ ! -f ${ELFFILE} ] && fatal "File does not exist"              # Check file exists
 
 
 BUILD_DIR=$(dirname "$ELFFILE")                                 # Absolute path
 ELFFILE_BASENAME_NO_EXT=$(basename $(echo "${ELFFILE%.*}"))     # No extension
 ELFFILE_TAGGED_NAME="${ELFFILE_BASENAME_NO_EXT}_tagged.out" 
 SFD_FILENAME="${ELFFILE_BASENAME_NO_EXT}.sfd"
-cd $BUILD_DIR    # Work next to the binary
+cd $BUILD_DIR                                                   # Work next to the binary
 
 WORKFOLDER="sfd_workfolder"
 rm -rf "${WORKFOLDER}"
 mkdir "${WORKFOLDER}"
 
-scrutiny get-firmware-id "${ELFFILE}" --output "${WORKFOLDER}"  # Extract the fimware ID from the .elf and write to "<workfolder>/firmwareid"
+scrutiny get-firmware-id "${ELFFILE}" --output "${WORKFOLDER}"  # Extract the firmware ID from the .elf and write to "<workfolder>/firmwareid"
 scrutiny tag-firmware-id "${ELFFILE}" "${ELFFILE_TAGGED_NAME}"  # Inject the firmware ID inside the .elf
 # Create the varmap file by reading the debug symbols
 scrutiny elf2varmap "${ELFFILE}"  \
