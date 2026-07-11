@@ -5,7 +5,8 @@ include(FetchContent)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(SCRUTINY_BUILD_CWRAPPER  OFF)
 set(SCRUTINY_ENABLE_DATALOGGING   ON)
-set(SCRUTINY_SUPPORT_64BITS   OFF)
+set(SCRUTINY_SUPPORT_64BITS   ON)
+set(SCRUTINY_SUPPORT_PROTECTED_REGIONS   ON)
 
 FetchContent_Declare(
   scrutiny-embedded
@@ -13,7 +14,7 @@ FetchContent_Declare(
   GIT_TAG        master
 )
 
-add_compile_options(-Wall -Wextra -Werror -fstack-usage -fcallgraph-info=su -fdump-rtl-expand)
+add_compile_options(-Wall -Wextra -Werror -fstack-usage -fcallgraph-info=su -fdump-rtl-expand -gdwarf-4)
 
 FetchContent_MakeAvailable(scrutiny-embedded)
 target_compile_options(scrutiny-embedded PRIVATE -Os)
