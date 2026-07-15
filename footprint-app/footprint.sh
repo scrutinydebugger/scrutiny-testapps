@@ -8,8 +8,8 @@ BUILD_DIR="app/build"
 
 echo "========= Stack Usage ========="
 echo "==============================="
-#python3 "./ttsiodras_stack-usage.py"  "$APP" "$BUILD_DIR" idle loop1
-python3 "./scrutiny-stack-usage.py" "$BUILD_DIR" idle loop1
+
+python3 "./scrutiny-devtools/stackusage.py" "$BUILD_DIR" idle loop1
 
 echo "==== libscrutiny-embedded Footprint ===="
 echo "========================================"

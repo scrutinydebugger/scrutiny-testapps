@@ -23,6 +23,3 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /tmp
 
-#RUN git clone https://github.com/ttsiodras/checkStackUsage
-
-ENV CHECK_STACK_USAGE_PY=/tmp/checkStackUsage/checkStackUsage.py

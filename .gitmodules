@@ -7,3 +7,6 @@
 [submodule "ti-lauchxl-f280049c-memdump/scrutiny-embedded"]
 	path = ti-launchxl-f280049c-memdump/scrutiny-embedded
 	url = https://github.com/scrutinydebugger/scrutiny-embedded
+[submodule "footprint-app/scrutiny-devtools"]
+	path = footprint-app/scrutiny-devtools
+	url = https://github.com/scrutinydebugger/scrutiny-devtools
