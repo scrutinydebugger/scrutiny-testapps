@@ -1,5 +1,6 @@
 ```
-docker build .t leon3
-./docker.sh ./build.sh
-./docker.sh ./run.sh
+export PLATFORM=leon3
+docker build . -t ${PLATFORM} -f ${PLATFORM}.docker
+./docker.sh ${PLATFORM} ./build.sh
+./docker.sh ${PLATFORM} ./run_and_dump.sh
 ```

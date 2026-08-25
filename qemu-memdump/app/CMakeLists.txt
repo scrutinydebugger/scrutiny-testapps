@@ -26,7 +26,7 @@ add_executable(${PROJECT_NAME}
 
 target_include_directories(${PROJECT_NAME} PRIVATE include)
 
-target_compile_options(${PROJECT_NAME} PRIVATE -O0 -Wall -Wextra -gdwarf-4)
+target_compile_options(${PROJECT_NAME} PRIVATE -O0 -Wall -Wextra -gdwarf-5)
 
 target_link_options(${PROJECT_NAME} PRIVATE
     -T ${PLATFORM_DIR}/linker.ld
