@@ -1,0 +1,11 @@
+[package]
+name = "rust-testapp"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "rust-testapp"
+path = "src/main.rs"
+
+[dependencies]
+scrutiny-embedded-rust = { git = "https://github.com/scrutinydebugger/scrutiny-embedded-rust", branch = "initial-dev", default-features = false, features = ["support_64bits", "datalogging"] }
