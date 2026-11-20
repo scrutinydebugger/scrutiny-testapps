@@ -1,6 +1,6 @@
 #!/bin/bash
-# Builds the testapp once per DWARF version and stores binary + memdump in testfiles/ as
-# <date>_rust-testapp-rustc_v<rustc version>_dwarf-v<dwarf version>[.memdump]
+# Builds the testapp once per DWARF version and stores binary, memdump and objdump DWARF info in testfiles/ as
+# <date>_rust-testapp-rustc_v<rustc version>_dwarf-v<dwarf version>[.memdump|.dwarf]
 set -euo pipefail
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
@@ -28,7 +28,9 @@ for dwarf_version in $DWARF_VERSIONS; do
     cp "$binary" "$OUTPUT_DIR/$name"
     memrange="$(python3 "$SCRIPT_DIR/get_elf_memranges.py" "$OUTPUT_DIR/$name")"
     "$OUTPUT_DIR/$name" memdump $memrange > "$OUTPUT_DIR/$name.memdump"
+    objdump --dwarf=info "$OUTPUT_DIR/$name" > "$OUTPUT_DIR/$name.dwarf"
 
     echo "Wrote $OUTPUT_DIR/$name"
     echo "Wrote $OUTPUT_DIR/$name.memdump"
+    echo "Wrote $OUTPUT_DIR/$name.dwarf"
 done
