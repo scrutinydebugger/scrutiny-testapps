@@ -1,0 +1,29 @@
+# Cargo build output
+/target/
+**/target/
+
+# Cargo.lock is kept on purpose: this is a binary crate
+
+# rustfmt backups
+**/*.rs.bk
+
+# MSVC debug info
+*.pdb
+
+# Profiling / coverage
+*.profraw
+*.profdata
+perf.data*
+flamegraph.svg
+
+# Editors / OS
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Python tooling (test.py)
+__pycache__/
+.mypy_cache/
+
+testfiles
