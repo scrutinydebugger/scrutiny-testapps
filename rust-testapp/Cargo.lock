@@ -12,4 +12,4 @@ dependencies = [
 [[package]]
 name = "scrutiny-embedded-rust"
 version = "0.1.0"
-source = "git+https://github.com/scrutinydebugger/scrutiny-embedded-rust?branch=initial-dev#30289b998eefd253a3e2e6dcc179c60ea1348b6b"
+source = "git+https://github.com/scrutinydebugger/scrutiny-embedded-rust?branch=master#bb45310b4df717343a2856275b18cdb9ec307447"

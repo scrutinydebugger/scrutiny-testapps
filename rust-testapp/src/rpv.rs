@@ -91,7 +91,7 @@ pub fn rpv_read(rpv: RuntimePublishedValue, out: &mut AnyType, _caller: Option<&
     true
 }
 
-pub fn rpv_write(rpv: RuntimePublishedValue, val: &AnyType) -> bool {
+pub fn rpv_write(rpv: RuntimePublishedValue, val: &AnyType, _: Option<&'static str>) -> bool {
     unsafe {
         match rpv.id {
             0x1000 => RPV_STORAGE.rpv_id_1000 = val.sint8,
