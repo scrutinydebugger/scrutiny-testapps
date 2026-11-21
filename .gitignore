@@ -69,3 +69,6 @@ Testing/
 .cache/
 
 venv
+
+# Unit test artifacts
+unittest_outputs/
